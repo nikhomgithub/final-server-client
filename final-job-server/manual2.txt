@@ -1,0 +1,17 @@
+//
+0:
+_id: "5e2fb816a65c3d3bbd558ed9"
+shopname: "ant"
+email: "a@mail.com"
+level: "owner"
+active: true
+date: "2020-01-28T04:27:02.080Z"
+user: Array(6)
+0: {useractive: true, _id: "5e301543c7565059e20b6c24", username: "cat", userpassword: "ccc", userlevel: "user"}
+1: {useractive: true, _id: "5e301565c7565059e20b6c25", username: "loveyou", userpassword: "lll", userlevel: "user"}
+2: {useractive: true, _id: "5e301583c7565059e20b6c26", username: "fry", userpassword: "fff", userlevel: "user"}
+3: {useractive: true, _id: "5e30170cc7565059e20b6c43", username: "Ice", userpassword: "iii", userlevel: "user"}
+4: {useractive: true, _id: "5e301717c7565059e20b6c44", username: "Whale", userpassword: "www", userlevel: "user"}
+5: {useractive: true, _id: "5e30171fc7565059e20b6c45", username: "Deer", userpassword: "ddd", userlevel: "user"}
+length: 6
+//

@@ -1,0 +1,33 @@
+PostMan
+
+DELETE
+http://localhost:3001/user/delete/5e27c586367bb0276d42f2ee
+
+Headers.
+Content-Type:application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlMjdjNTg2MzY3YmIwMjc2ZDQyZjJlZSIsImlhdCI6MTU3OTY3NzkxMiwiZXhwIjoxNTc5NjgxNTEyfQ.lEVTH2BTMmaV_fJbw_aKur-n5EMyMc82OP5sJ6Dqs0I
+
+
+
+UserSchema: Schema = new Schema({
+  username: String,
+  password: String,
+  chat: [{
+    lastSeen: { type: Date, default: Date.now },
+    room: { type: Schema.Types.ObjectId, ref: 'ChatRoom' }
+  }],
+});
+
+I wanna make static method to the UserSchema, so that updates chat[i].lastSeen by given room _id
+
+UserSchema.statics.lastSeen = 
+function lastSeen(username: string, roomId: number, date: Date) {
+    this.update({
+      username: username,
+      'chat.room': roomId
+    }, { $set: { 'chat.$.lastSeen': date }})
+    .exec();
+};
+
+
+
